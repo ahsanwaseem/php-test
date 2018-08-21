@@ -36,6 +36,8 @@ Function Return Value:
 1) If everything is successful, it returns a string containing JSON table/tree formatted data.
 Otherwise, it returns an empty string.
 
+Get the SimpleXMLElement representation of the function input parameter that contains XML string. Convert the XML string contents to SimpleXMLElement type. SimpleXMLElement type is nothing but an object that can be processed with normal property selectors and (associative) array iterators. simplexml_load_string returns a SimpleXMLElement object which contains an instance variable which itself is an associative array of several SimpleXMLElement objects.	
+
 ### Using Services_JSON in xml2json.php
 
 first we defined some useful constants. The first line of code imports the Services_JSON implementation. It takes XML data as input, and it converts the XML string into a SimpleXMLElement object, which is sent as input to another (recursive) function in this class. This function then converts the XML elements into a PHP associative array. That array is then passed as an input to the Services_JSON encoder, which gives you the JSON-formatted output.
