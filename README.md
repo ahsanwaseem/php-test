@@ -4,6 +4,8 @@
 
 ### php -f xml2json_test.php test1.xml
 
+   ****
+
 # Solution Explained
 
 By using two core PHP features SimpleXMLElement and Services_JSON, it is possible to convert any arbitrary XML data into JSON, first we need to convert the XML content into a suitable PHP data type using SimpleXMLElement, then we feed the PHP data to the Services_JSON encoder, which in turn produces the final JSON-formatted output.
