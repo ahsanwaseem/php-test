@@ -36,7 +36,7 @@ Function Return Value:
 1) If everything is successful, it returns a string containing JSON table/tree formatted data.
 Otherwise, it returns an empty string.
 
-Get the SimpleXMLElement representation of the function input parameter that contains XML string. Convert the XML string contents to SimpleXMLElement type. SimpleXMLElement type is nothing but an object that can be processed with normal property selectors and (associative) array iterators. simplexml_load_string returns a SimpleXMLElement object which contains an instance variable which itself is an associative array of several SimpleXMLElement objects.	
+Get the SimpleXMLElement representation of the function input parameter that contains XML string. Convert the XML string contents to SimpleXMLElement type. SimpleXMLElement type is nothing but an object that can be processed with normal property selectors and (associative) array iterators. simplexml_load_string returns a SimpleXMLElement object which contains an instance variable which itself is an associative array of several SimpleXMLElement objects.
 
 Function name:
 ---------------
@@ -59,12 +59,6 @@ If the input XML is in table format (i.e. non-nested), the resulting associative
 array will also be in a table format. Conversely, if the input XML is in
 tree (i.e. nested) format, this function will return an associative array
 (tree/nested) representation of that XML.
-
-There are so many ways to turn an XML document into a PHP array. Out of all
-those options, the recursive logic here uses a method that is very nicely
-documented by the PHP open source community in the SimpleXMLElement section of
-the PHP manual available at www.php.net. Credit goes to all those kind
-PHP (People Helping People!!!) souls.
 
 Function Return Value:
 ----------------------
