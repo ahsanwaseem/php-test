@@ -4,7 +4,7 @@
 
 ### php -f xml2json_test.php test1.xml
 
-   ****
+   **
 
 # Solution Explained
 
