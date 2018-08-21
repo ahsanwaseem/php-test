@@ -20,6 +20,22 @@ test1.xml
 
 ## xml2json.php
 
+Function Parameters:
+---------------------
+1) XML data string.
+
+Description:
+------------
+This function transforms the XML based String data into JSON format. If the input XML
+string is in table format, the resulting JSON output will also be in table format.
+Conversely, if the input XML string is in tree format, the resulting JSON output will
+also be in tree format.
+
+Function Return Value:
+----------------------
+1) If everything is successful, it returns a string containing JSON table/tree formatted data.
+Otherwise, it returns an empty string.
+
 ### Using Services_JSON in xml2json.php
 
 first we defined some useful constants. The first line of code imports the Services_JSON implementation. It takes XML data as input, and it converts the XML string into a SimpleXMLElement object, which is sent as input to another (recursive) function in this class. This function then converts the XML elements into a PHP associative array. That array is then passed as an input to the Services_JSON encoder, which gives you the JSON-formatted output.
