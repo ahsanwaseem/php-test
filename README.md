@@ -38,6 +38,39 @@ Otherwise, it returns an empty string.
 
 Get the SimpleXMLElement representation of the function input parameter that contains XML string. Convert the XML string contents to SimpleXMLElement type. SimpleXMLElement type is nothing but an object that can be processed with normal property selectors and (associative) array iterators. simplexml_load_string returns a SimpleXMLElement object which contains an instance variable which itself is an associative array of several SimpleXMLElement objects.	
 
+Function name:
+---------------
+convertSimpleXmlElementObjectIntoArray
+
+Function Parameters:
+---------------------
+1) Simple XML Element Object
+
+(The following function argument needs to be passed only when this function is
+called recursively. It can be omitted when this function is called from another
+function.)
+2) Recursion Depth
+
+Description:
+------------
+This function accepts a SimpleXmlElementObject as a single argument.
+This function converts the XML object into a PHP associative array.
+If the input XML is in table format (i.e. non-nested), the resulting associative
+array will also be in a table format. Conversely, if the input XML is in
+tree (i.e. nested) format, this function will return an associative array
+(tree/nested) representation of that XML.
+
+There are so many ways to turn an XML document into a PHP array. Out of all
+those options, the recursive logic here uses a method that is very nicely
+documented by the PHP open source community in the SimpleXMLElement section of
+the PHP manual available at www.php.net. Credit goes to all those kind
+PHP (People Helping People!!!) souls.
+
+Function Return Value:
+----------------------
+1) If everything is successful, it returns an associate array containing
+the data collected from the XML format. Otherwise, it returns null.
+
 ### Using Services_JSON in xml2json.php
 
 first we defined some useful constants. The first line of code imports the Services_JSON implementation. It takes XML data as input, and it converts the XML string into a SimpleXMLElement object, which is sent as input to another (recursive) function in this class. This function then converts the XML elements into a PHP associative array. That array is then passed as an input to the Services_JSON encoder, which gives you the JSON-formatted output.
